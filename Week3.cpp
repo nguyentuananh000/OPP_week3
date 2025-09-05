@@ -10,7 +10,7 @@ class Vehicles{
     public:
     //hàm khởi tạo
     Vehicles(){
-
+       
     }
     //hàm khởi tạo để truyền các giá trị của object
     Vehicles(string tp, int max, string engine){
@@ -31,16 +31,16 @@ class Vehicles{
     //các hàm get để truy xuất được các thông tin của xe
     string getType(){return type;}
     int getMaxSpeed(){return maxSpeed;}
-    string getEngineTpye(){return engineType;}
+    string getEngineType(){return engineType;}
     //hàm trả về tốc độ tối đa của xe
     void accelerate(){
         cout<<"The "<<type<<" is accelerating to "<<maxSpeed<<" km/h"<<endl;
     }
     //hàm hiển thị thông tin của xe
     void displayInfor(){
-        cout<<"Vehicle type: "<<type<<endl;
-        cout<<"Vehicle max speed: "<<maxSpeed<<endl;
-        cout<<"Vehicle engine: "<<engineType<<endl;
+        cout<<"Vehicle type: " << getType()<<endl;
+        cout<<"Vehicle max speed: " << getMaxSpeed() <<endl;
+        cout<<"Vehicle engine: " << getEngineType()<<endl;
     }
 };
 int main(){
@@ -53,13 +53,13 @@ int main(){
     toyota->accelerate();
     //các ví dụ tương tự
     Vehicles *Lexus = new Vehicles("Lexus", 120, "V4");
-    toyota->displayInfor();
-    toyota->accelerate();
+    Lexus->displayInfor();
+    Lexus->accelerate();
     Vehicles *Ferarri = new Vehicles("ferarri", 360, "V36");
-    toyota->displayInfor();
-    toyota->accelerate();
+    Ferarri->displayInfor();
+    Ferarri->accelerate();
     Vehicles *Tesla = new Vehicles("Tesla", 100, "Electronic Engine");
-    toyota->displayInfor();
-    toyota->accelerate();
+    Tesla->displayInfor();
+    Tesla->accelerate();
     return 0;
 }
