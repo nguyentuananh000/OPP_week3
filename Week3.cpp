@@ -1,3 +1,6 @@
+//Nguyen Tuan Anh
+//ID: 24110074
+//this code complete with no help from any LLM
 #include <iostream>
 #include <string>
 using namespace std;
@@ -62,4 +65,5 @@ int main(){
     Tesla->displayInfor();
     Tesla->accelerate();
     return 0;
+
 }
